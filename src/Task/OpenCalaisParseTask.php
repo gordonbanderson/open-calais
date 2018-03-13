@@ -13,12 +13,13 @@ class OpenCalaisParseTask extends \SilverStripe\Dev\BuildTask
     private static $segment = 'OpenCalais_Parse';
 
 
-    public function run($request) {
+    public function run($request)
+    {
         #Session::set("loggedInAs",1);
         echo 'Running task';
-        $canAccess = ( Director::isDev() || Director::is_cli() || Permission::check( "ADMIN" ) );
-        if ( !$canAccess ) {
-            return Security::permissionFailure( $this );
+        $canAccess = ( Director::isDev() || Director::is_cli() || Permission::check("ADMIN") );
+        if (!$canAccess) {
+            return Security::permissionFailure($this);
         }
 
         $page_id = $_GET['page'];

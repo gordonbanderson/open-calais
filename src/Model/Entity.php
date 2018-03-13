@@ -69,5 +69,4 @@ class Entity extends DataObject
     ];
 
     private static $table_name = 'Entity';
-
 }

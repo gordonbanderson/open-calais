@@ -46,8 +46,7 @@ class OpenCalaisDataObjectExtension extends Extension
         // these are entities which are stored in the database already, these need to be 1 to many against from
         // DataObject to Entity
         $entitiesToAssociate = [];
-        foreach($entities as $entity)
-        {
+        foreach ($entities as $entity) {
             /** @var DataList $existingEntities */
             $existingEntities = Entity::get()->filter([
                 'Name' => $entity->Name,
@@ -73,7 +72,8 @@ class OpenCalaisDataObjectExtension extends Extension
     /**
      * Mark this record as needing reparsed open calais wise
      */
-    public function onBeforeWrite() {
+    public function onBeforeWrite()
+    {
         $this->owner->OpenCalaisDirty = 1;
         parent::onBeforeWrite();
     }
@@ -85,8 +85,7 @@ class OpenCalaisDataObjectExtension extends Extension
     public function getGroupedEntities()
     {
         $grouped = [];
-        foreach ($this->owner->Entities() as $entity)
-        {
+        foreach ($this->owner->Entities() as $entity) {
             if (!isset($grouped[$entity->Name])) {
                 $grouped[$entity->Name] = new ArrayList();
             }
@@ -97,7 +96,7 @@ class OpenCalaisDataObjectExtension extends Extension
         }
 
         $groupedList = new ArrayList();
-        foreach(array_keys($grouped) as $key) {
+        foreach (array_keys($grouped) as $key) {
             $groupedList->push([
                 'Name' => $key,
                 'Entities' => $grouped[$key],
@@ -106,5 +105,4 @@ class OpenCalaisDataObjectExtension extends Extension
 
         return new ArrayData(['List' => $groupedList]);
     }
-
 }

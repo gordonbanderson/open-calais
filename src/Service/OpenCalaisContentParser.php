@@ -39,23 +39,18 @@ class OpenCalaisContentParser
         $result = [];
         // @todo, social tags
         error_log('RSM: ' . print_r($rawSemanticMarkup['entities'], 1));
-        foreach($rawSemanticMarkup['entities'] as $entityKey => $entityGroupings)
-        {
-
+        foreach ($rawSemanticMarkup['entities'] as $entityKey => $entityGroupings) {
             error_log('-----');
             error_log(print_r($entityGroupings, 1));
-            foreach($entityGroupings as $rawEntityValue)
-            {
+            foreach ($entityGroupings as $rawEntityValue) {
                 error_log('KEY: ' . $entityKey);
                 error_log('RAW: ' . print_r($rawEntityValue, 1));
                 $entity = new Entity();
                 $entity->Name = $entityKey;
                 $entity->Value = $rawEntityValue;
                 $result[] = $entity;
-
             }
         }
         return $result;
     }
-
 }
