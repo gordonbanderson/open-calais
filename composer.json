@@ -1,0 +1,23 @@
+{
+    "name": "suilven/silverstripe-opencalais",
+    "description": "Extra metadata from your content using Open Calais service",
+    "type": "silverstripe-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gordon Anderson",
+            "email": "gordon.b.anderson@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Suilven\\OpenCalais\\": "src/",
+            "Suilven\\OpenCalais\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "lsmonki/php-open-calais": "2.x",
+        "html2text/html2text" : "~4"
+    }
+}

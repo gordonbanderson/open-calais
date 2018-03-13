@@ -1,0 +1,6 @@
+---
+Name: opencalaisparser
+---
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Suilven\OpenCalais\Extensions\OpenCalaisDataObjectExtension
