@@ -19,5 +19,8 @@
     "require": {
         "lsmonki/php-open-calais": "2.x",
         "html2text/html2text" : "~4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
     }
 }
