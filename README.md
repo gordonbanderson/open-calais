@@ -18,3 +18,9 @@
 ![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-open-calais/branch.svg?branch=master)
 
 <p>**** Note, this is still work in progress ****</p>
+
+
+
+```
+phpdbg -qrr vendor/bin/phpunit  tests
+```
