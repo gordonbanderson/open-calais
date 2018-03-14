@@ -1,5 +1,5 @@
 {
-	"name": "suilven/silverstripe-opencalais",
+	"name": "suilven/opencalais",
 	"description": "Extract metadata from your content using Open Calais service",
 	"type": "silverstripe-module",
 	"license": "MIT",
